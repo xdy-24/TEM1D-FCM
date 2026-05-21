@@ -80,13 +80,17 @@ After running the quick test, the program performs the example inversion and gen
 - `layer_classification.txt`
 - `parameter_log.txt`
 - `residuals_log.txt`
+In addition, the program generates five MATLAB figures showing:
 
-The program also generates figures showing the inversion results, including resistivity and chargeability fitting curves, decay voltage fitting curve, iteration curve, clustering results, and time-gate residuals.
+1. Resistivity fitting curve and Chargeability fitting curve
+2. Time-gate errors 
+3. Decay voltage fitting curve
+4. Iteration curve
+5. clustering results
 
 ## Notes
 
-The inversion uses guided fuzzy C-means clustering. Because random initialization is used in the clustering procedure, the inversion results may show slight variations between different runs.
-
+Because the guided fuzzy C-means clustering procedure involves random initialization, repeated runs may produce slightly different numerical results. Therefore, the outputs may not be exactly identical to the example results, although the overall trends should remain consistent.
 For a new dataset, users should modify the input data file and the corresponding model and inversion parameters in `inv_main.m` and `occam1D_inversion_with_clustering.m`.
 
 ## License
@@ -95,6 +99,7 @@ This project is released under the MIT License. See the `LICENSE` file for detai
 
 ## Contact
 
-Dongyang Xie  
-Email: 2024126079@chd.edu.cn
+Developer: Dongyang Xie
+Maintainer: Zhipeng Qi
+Contact: Zhipeng Qi, qzhipeng@126.com
 
