@@ -17,8 +17,9 @@ The example provided in this repository uses the `realmodel.txt` file as input d
 ## Requirements
 
 - MATLAB R2024a or later is recommended.
+- Windows 64-bit operating system is required for the provided `mexBtFwdArbitraryLoop.mexw64` file.
 - No additional MATLAB toolboxes are required unless otherwise stated in the code comments.
-
+  
 ## Repository contents
 
 ```text
@@ -40,6 +41,7 @@ TEM1D-FCM/
 
 - `run_quick_test.m`: Quick-test script for running the example.
 - `inv_main.m`: Main inversion program.
+- `mexBtFwdArbitraryLoop.mexw64`: Compiled MATLAB MEX forward-modeling program used to compute the transient electromagnetic response. This file is for Windows 64-bit MATLAB.
 - `occam1D_inversion_with_clustering.m`: Main inversion subroutine with clustering constraints.
 - `calculate_jacobian_with_clustering.m`: Jacobian calculation with clustering constraints.
 - `calculate_misfit_with_clustering.m`: Misfit calculation with clustering constraints.
@@ -80,6 +82,7 @@ After running the quick test, the program performs the example inversion and gen
 - `layer_classification.txt`
 - `parameter_log.txt`
 - `residuals_log.txt`
+  
 In addition, the program generates five MATLAB figures showing:
 
 1. Resistivity fitting curve and Chargeability fitting curve
@@ -92,6 +95,10 @@ In addition, the program generates five MATLAB figures showing:
 
 Because the guided fuzzy C-means clustering procedure involves random initialization, repeated runs may produce slightly different numerical results. Therefore, the outputs may not be exactly identical to the example results, although the overall trends should remain consistent.
 For a new dataset, users should modify the input data file and the corresponding model and inversion parameters in `inv_main.m` and `occam1D_inversion_with_clustering.m`.
+
+## Note on the MEX forward-modeling program
+
+The file `mexBtFwdArbitraryLoop.mexw64` is a compiled MATLAB MEX forward-modeling program used by the inversion code to calculate the transient electromagnetic response. The provided MEX file is intended for Windows 64-bit MATLAB environments.
 
 ## License
 
