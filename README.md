@@ -100,7 +100,8 @@ For a new dataset, users should modify the input data file and the corresponding
 
 ## Note on the MEX forward-modeling program
 
-The file `mexBtFwdArbitraryLoop.mexw64` is a compiled MATLAB MEX forward-modeling program used by the inversion code to calculate the transient electromagnetic response. The provided MEX file is intended for Windows 64-bit MATLAB environments.
+The file `mexBtFwdArbitraryLoop.mexw64` is a compiled MATLAB MEX forward-modeling program used by the inversion code to calculate the transient electromagnetic response. The provided MEX file is intended for Windows 64-bit MATLAB environments. The MATLAB scripts in this repository implement the inversion framework and the fuzzy C-means clustering constraints used in the manuscript.
+
 
 ## License
 
